@@ -1,6 +1,6 @@
 // import 'dart:html';
 
-import 'dart:ffi';
+// import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:responsiveui_container/responsiveui_container.dart';
@@ -28,10 +28,23 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    super.initState();
+    currentTheme.addListener(() {
+      print('Changes');
+      setState(() {});
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -59,6 +72,17 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String dropdownvalue = 'EN';
+
+  var items = [
+    'EN',
+    'FR',
+    'GR',
+    'SP',
+    'LA',
+    'GU',
+  ];
+
   @override
   void initState() {
     super.initState();
@@ -86,12 +110,12 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 SizedBox(
-                  height: 100,
+                  height: 80,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Spacer(),
+                    // Spacer(),
                     Align(
                       alignment: Alignment.center,
                       child: Text(
@@ -111,13 +135,31 @@ class _MyHomePageState extends State<MyHomePage> {
                         currentTheme.switchTheme();
                       },
                     ),
+                    DropdownButton(
+                      value: dropdownvalue,
+                      icon: const Icon(Icons.keyboard_arrow_down),
+                      items: items.map((String items) {
+                        return DropdownMenuItem(
+                          value: items,
+                          child: Text(items),
+                        );
+                      }).toList(),
+                      onChanged: (String? newValue) {
+                        setState(() {
+                          dropdownvalue = newValue!;
+                        });
+                      },
+                    ),
                   ],
                 ),
-                SizedBox(
-                  width: 50.0,
-                  child: Divider(
-                    color: Colors.deepPurple,
-                    thickness: 2.0,
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: SizedBox(
+                    width: 100.0,
+                    child: Divider(
+                      color: Colors.deepPurple,
+                      thickness: 2.0,
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -277,7 +319,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Row(
                   children: [
                     Text(
-                      'Skills',
+                      'My Skills',
                       style: GoogleFonts.poppins(
                         fontStyle: FontStyle.normal,
                         fontWeight: FontWeight.bold,
@@ -458,6 +500,45 @@ class _MyHomePageState extends State<MyHomePage> {
                             width: 50.0,
                           ),
                         ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 40.0,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      'What I can do for your company',
+                      style: GoogleFonts.poppins(
+                        fontStyle: FontStyle.normal,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  ],
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: SizedBox(
+                    width: 150.0,
+                    child: Divider(
+                      color: Colors.deepPurple,
+                      thickness: 1.0,
+                    ),
+                  ),
+                ),
+                Row(
+                  children: [
+                    Flexible(
+                      child: Text(
+                        'My previous work experience includes innovation in many areas, including strategies for more effective teamwork. At my previous company, I devised strategies for improving teamwork and communication among members of team projects. I can bring to your organization not only my ideas from my previous job, but my general passion for innovation and problem solving too.',
+                        style: GoogleFonts.lato(
+                            fontStyle: FontStyle.normal,
+                            fontSize: 12,
+                            letterSpacing: 1.0,
+                            textStyle: TextStyle()),
                       ),
                     ),
                   ],
