@@ -24,11 +24,11 @@ Other Features I would like to add:
 - GitHub Api Integration to view repositories.
 
 ## Download the App
-Link - [online documentation](https://docs.flutter.dev/)
+Link - [Android APK](https://drive.google.com/file/d/1Cz71IWe_e9rgqSGcf-ns5rcsg20VVtSd/view?usp=sharing)
 
 Challenges Faced
 
 - I had issues with state management when implementing the dark/light mode feature
 - I had issues with null safety after implementing the language translator. (The App was running on macOS but not iOS)
 
-Link to [Appetize.io]()
+Link to [Appetize.io](https://appetize.io/embed/imjhscaf54fkftu6yuvlh6bzse?device=pixel4&osVersion=12.0&scale=75&deviceColor=black)
