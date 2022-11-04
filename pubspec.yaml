@@ -21,6 +21,7 @@ dependencies:
   font_awesome_flutter: ^10.2.1
   hive: ^2.2.3
   theme_config: ^0.1.1
+  language_builder: ^0.1.2
 
 dev_dependencies:
   flutter_test:
