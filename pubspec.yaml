@@ -19,8 +19,6 @@ dependencies:
   google_fonts: ^3.0.1
   url_launcher: ^6.1.6
   font_awesome_flutter: ^10.2.1
-  hive: ^2.2.3
-  theme_config: ^0.1.1
   language_builder: ^0.1.2
 
 dev_dependencies:

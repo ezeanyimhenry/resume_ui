@@ -1,15 +1,9 @@
-// import 'dart:html';
-
-// import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:responsiveui_container/responsiveui_container.dart';
 import 'package:google_fonts/google_fonts.dart';
-// import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:language_builder/language_builder.dart';
-
 import 'languages.dart';
 
 class MyTheme with ChangeNotifier {

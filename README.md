@@ -1,16 +1,34 @@
 # resume_ui
 
-A new Flutter project.
+A mobile app version of my Resume.
 
-## Getting Started
+## Description
 
-This project is a starting point for a Flutter application.
+This project was done with Flutter & Dart. It shows a UI of my Resume (About me, Social links, Skills, What I offer).
 
-A few resources to get you started if this is your first Flutter project:
+It has Multiple Language Translator and Dark/Light mode switch.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Design Inspiration from: [Resume UI Design](https://www.pinterest.com/pin/462604192971991059/)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+Libraries Used:
+
+- Google Fonts: Used for the texts fonts and styling on the app
+- URL Launcher: Used to embed social links
+- Font Awesome Fluter: Used for the icons in the app
+- Language Builder: Used to implement the language translator
+- Responsive UI Container: used for App responsiveness and behaviour on different screens
+
+Other Features I would like to add:
+- A Projects Portfolio Slider with links to view project.
+- GitHub Api Integration to view repositories.
+
+## Download the App
+Link - [online documentation](https://docs.flutter.dev/)
+
+Challenges Faced
+
+- I had issues with state management when implementing the dark/light mode feature
+- I had issues with null safety after implementing the language translator. (The App was running on macOS but not iOS)
+
+Link to [Appetize.io]()
